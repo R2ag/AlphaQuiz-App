@@ -10,4 +10,6 @@
     <color name="backg">#6A5BE2</color>
     <color name="category">#E8E4FA</color>
     <color name="click">#FF8FA3</color>
+    <color name="dark_gray">#333333</color>
+
 </resources>
