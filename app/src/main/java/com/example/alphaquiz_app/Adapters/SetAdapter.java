@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.alphaquiz_app.Models.SetModel;
 import com.example.alphaquiz_app.R;
+import com.example.alphaquiz_app.databinding.ItemSetsBinding;
 
 import java.util.ArrayList;
 
@@ -35,6 +36,8 @@ public class SetAdapter extends RecyclerView.Adapter<SetAdapter.viewHolder>{
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         final SetModel model = list.get(position);
+
+        holder.binding.setName.setText(model.getSetName());
     }
 
     @Override
@@ -44,9 +47,11 @@ public class SetAdapter extends RecyclerView.Adapter<SetAdapter.viewHolder>{
 
     public class viewHolder extends RecyclerView.ViewHolder{
 
-
+        ItemSetsBinding binding;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
+
+            binding = ItemSetsBinding.bind(itemView);
         }
     }
 }
