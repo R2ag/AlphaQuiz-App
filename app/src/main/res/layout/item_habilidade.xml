@@ -37,11 +37,11 @@
                 app:srcCompat="@drawable/lock" />
 
             <TextView
-                android:id="@+id/skillName"
+                android:id="@+id/habilidadeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="SKILL-1"
+                android:text="Habilidade 1"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintStart_toEndOf="@+id/imageView"

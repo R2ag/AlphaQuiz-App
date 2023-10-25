@@ -6,7 +6,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="@color/category"
-tools:context=".Activities.SkillActivity">
+tools:context=".Activities.HabilidadeActivity">
 
 <androidx.cardview.widget.CardView
     android:id="@+id/cardView2"
@@ -148,7 +148,7 @@ tools:context=".Activities.SkillActivity">
     app:layout_constraintStart_toEndOf="@+id/imageView5" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/activityesRecy"
+        android:id="@+id/perguntasRecy"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"

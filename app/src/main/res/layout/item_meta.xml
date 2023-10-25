@@ -37,11 +37,11 @@
                 app:srcCompat="@drawable/lock" />
 
             <TextView
-                android:id="@+id/setName"
+                android:id="@+id/metaName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="SET-1"
+                android:text="Meta 1"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintStart_toEndOf="@+id/imageView"

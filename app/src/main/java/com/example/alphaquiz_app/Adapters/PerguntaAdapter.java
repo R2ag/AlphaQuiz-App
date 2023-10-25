@@ -8,18 +8,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.alphaquiz_app.Models.SkillModel;
+import com.example.alphaquiz_app.Models.PerguntaModel;
 import com.example.alphaquiz_app.R;
-import com.example.alphaquiz_app.databinding.ItemSkillBinding;
+import com.example.alphaquiz_app.databinding.ItemPerguntaBinding;
 
 import java.util.ArrayList;
 
-public class SkillAdapter extends RecyclerView.Adapter<SkillAdapter.viewHolder> {
+public class PerguntaAdapter extends RecyclerView.Adapter<PerguntaAdapter.viewHolder>{
 
     Context context;
-    ArrayList<SkillModel> list;
 
-    public SkillAdapter(Context context, ArrayList<SkillModel> list) {
+    ArrayList<PerguntaModel> list;
+
+    public PerguntaAdapter(Context context, ArrayList<PerguntaModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -27,16 +28,14 @@ public class SkillAdapter extends RecyclerView.Adapter<SkillAdapter.viewHolder> 
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_skill, parent, false);
-
+        View view = LayoutInflater.from(context).inflate(R.layout.item_pergunta, parent, false);
         return new viewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        final SkillModel model = list.get(position);
-
-        holder.binding.skillName.setText(model.getSkillName());
+        final PerguntaModel model = list.get(position);
+        holder.binding.perguntaName.setText(model.getPerguntaName());
     }
 
     @Override
@@ -46,11 +45,11 @@ public class SkillAdapter extends RecyclerView.Adapter<SkillAdapter.viewHolder> 
 
     public class viewHolder extends RecyclerView.ViewHolder{
 
-        ItemSkillBinding binding;
+        ItemPerguntaBinding binding;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            binding = ItemSkillBinding.bind(itemView);
+
+            binding = ItemPerguntaBinding.bind(itemView);
         }
     }
-
 }

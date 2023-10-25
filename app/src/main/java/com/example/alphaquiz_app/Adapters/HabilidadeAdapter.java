@@ -8,18 +8,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.alphaquiz_app.Models.AulaModel;
+import com.example.alphaquiz_app.Models.HabilidadeModel;
 import com.example.alphaquiz_app.R;
-import com.example.alphaquiz_app.databinding.ItemAulaBinding;
+import com.example.alphaquiz_app.databinding.ItemHabilidadeBinding;
 
 import java.util.ArrayList;
 
-public class AulaAdapter extends RecyclerView.Adapter<AulaAdapter.viewHolder> {
+public class HabilidadeAdapter extends RecyclerView.Adapter<HabilidadeAdapter.viewHolder> {
 
     Context context;
-    ArrayList<AulaModel> list;
+    ArrayList<HabilidadeModel> list;
 
-    public AulaAdapter(Context context, ArrayList<AulaModel> list) {
+    public HabilidadeAdapter(Context context, ArrayList<HabilidadeModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -27,14 +27,16 @@ public class AulaAdapter extends RecyclerView.Adapter<AulaAdapter.viewHolder> {
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_aula, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_habilidade, parent, false);
+
         return new viewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        final AulaModel model = list.get(position);
-        holder.binding.aulaName.setText(model.getAulaName());
+        final HabilidadeModel model = list.get(position);
+
+        holder.binding.habilidadeName.setText(model.getHabilidadeName());
     }
 
     @Override
@@ -42,14 +44,12 @@ public class AulaAdapter extends RecyclerView.Adapter<AulaAdapter.viewHolder> {
         return list.size();
     }
 
-
     public class viewHolder extends RecyclerView.ViewHolder{
 
-        ItemAulaBinding binding;
+        ItemHabilidadeBinding binding;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-
-            binding = ItemAulaBinding.bind(itemView);
+            binding = ItemHabilidadeBinding.bind(itemView);
         }
     }
 

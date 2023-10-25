@@ -8,18 +8,18 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.alphaquiz_app.Models.SetModel;
+import com.example.alphaquiz_app.Models.MetaModel;
 import com.example.alphaquiz_app.R;
-import com.example.alphaquiz_app.databinding.ItemSetsBinding;
+import com.example.alphaquiz_app.databinding.ItemMetaBinding;
 
 import java.util.ArrayList;
 
-public class SetAdapter extends RecyclerView.Adapter<SetAdapter.viewHolder>{
+public class MetaAdapter extends RecyclerView.Adapter<MetaAdapter.viewHolder>{
 
     Context context;
-    ArrayList<SetModel> list;
+    ArrayList<MetaModel> list;
 
-    public SetAdapter(Context context, ArrayList<SetModel> list) {
+    public MetaAdapter(Context context, ArrayList<MetaModel> list) {
         this.context = context;
         this.list = list;
     }
@@ -28,16 +28,16 @@ public class SetAdapter extends RecyclerView.Adapter<SetAdapter.viewHolder>{
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(context).inflate(R.layout.item_sets, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_meta, parent, false);
 
         return new viewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        final SetModel model = list.get(position);
+        final MetaModel model = list.get(position);
 
-        holder.binding.setName.setText(model.getSetName());
+        holder.binding.metaName.setText(model.getMetaName());
     }
 
     @Override
@@ -47,11 +47,11 @@ public class SetAdapter extends RecyclerView.Adapter<SetAdapter.viewHolder>{
 
     public class viewHolder extends RecyclerView.ViewHolder{
 
-        ItemSetsBinding binding;
+        ItemMetaBinding binding;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
 
-            binding = ItemSetsBinding.bind(itemView);
+            binding = ItemMetaBinding.bind(itemView);
         }
     }
 }

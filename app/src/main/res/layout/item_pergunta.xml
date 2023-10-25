@@ -37,7 +37,7 @@
                 app:srcCompat="@drawable/lock" />
 
             <TextView
-                android:id="@+id/activityName"
+                android:id="@+id/perguntaName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
